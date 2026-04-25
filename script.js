@@ -1,7 +1,7 @@
 // Sahifa ochilganda yozib chiqish effekti
 const text = "Fullstack Developer";
-const p = document.querySelector('.hero p');
-p.textContent = '';
+const p = document.querySelector('.hero p:first-of-type');
+
 
 let i = 0;
 
