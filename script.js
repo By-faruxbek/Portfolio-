@@ -28,11 +28,14 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 sections.forEach(section => {
-  section.style.opacity = '0';
-  section.style.transform = 'translateY(30px)';
-  section.style.transition = 'all 0.6s ease';
-  observer.observe(section);
+  if (!section.classList.contains('hero')) {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(30px)';
+    section.style.transition = 'all 0.6s ease';
+    observer.observe(section);
+  }
 });
+
 
 function modniOzgartir() {
   document.body.classList.toggle("light");
